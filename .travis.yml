@@ -3,9 +3,9 @@ python:
  - "2.7.6"
 # command to install dependencies
 install:
- - python encuestas/setup.py install
- - pip install -r encuestas/requirements.txt
+ - python aplicacion/setup.py install
+ - pip install -r aplicacion/requirements.txt
 # command to run tests
 script:
- - cd encuestas
+ - cd aplicacion
  - python manage.py test
