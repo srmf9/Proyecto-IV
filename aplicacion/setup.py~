@@ -7,5 +7,6 @@ setup(name='Encuestas',
       author='Salvador Rueda Molina',
       author_email='salviwui@gmail.com',
       url='enlace',
-      packages=['django', 'wheel'],
+      packages=['Encuestas'],
+      install_requires=['django', 'wheel'],
      )
