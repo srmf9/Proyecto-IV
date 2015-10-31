@@ -59,20 +59,18 @@ setup(name='Encuestas',
      )
 ~~~
 
-Tambíen necesitamos un fichero llamado .travis.yml que sera el encargado de instalar todas las dependencias y de ejecutar  los test para comprobar  si se puede deplegar la aplicación. 
+Tambíen necesitamos un fichero llamado .travis.yml que sera el encargado de instalar todas las dependencias y de ejecutar  los test, estas operaciones las realizo con el makefile que he creado. El objetivo de usar el makefile es poder realizar tareas con una sola orden. 
 .travis.yml  
 ~~~
 language: python
 python:
  - "2.7"
-# command to install dependencies
-install:
- - python aplicacion/setup.py install
- - pip install -r aplicacion/requirements.txt
-# command to run tests
-script:
+before_install:
  - cd aplicacion
- - python manage.py test
+ install:
+ - make install
+ script:
+ - make test
 ~~~
 
 Si la ejecución tiene éxito tendremos la siguiente captura:
