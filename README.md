@@ -26,7 +26,20 @@ Para ejecutar los test basta con escribir:
 ~~~
 python manage.py test encuestas 
 ~~~
-Con estos test puedo permitir encontrar fallos para su posterior programación y correción(TDD). 
+Con estos test puedo permitir encontrar fallos para su posterior programación y correción(TDD).
+Test es un sistema que ofrece Django de muy fácil uso ya que viene integrado en el framework y con el que comodamente podemos ejecutar y comprobar nuestros test, es por eso que he decidido utilizar este metodo. 
+
+##Herramientas de construción
+He decido crear un makefile para realizar todas las tareas con una sola orden. Podeis consultar [aqui](aplicacion/encuestas/Makefile) el makefile.  
+El funcionamiento del makefile es el siguiente:  
+  
+-make run: Ejecuta la aplacación.  
+
+-make test: Lanza los test para comprobar el correcto funcionaiento de la aplicación.  
+
+-make install: Se encarga de instalar todas las dependencias necesarias para el funcionamiento de la aplicación que se encuentran en el fichero setup.py.   
+
+-make clean: Borra todos los .py y .pyc.
 ## Integración continua
 Para conseguir la integración continua he decido usar Travis por su facilidad de uso y por poder conectarse directamente con GitHub.
 Para que funcione correctamente he creado un fichero setup.py que contiene las dependencias de mi aplicación.  
