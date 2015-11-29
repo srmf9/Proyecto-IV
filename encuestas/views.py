@@ -4,6 +4,7 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from django.http import HttpResponse
 
+
 from .models import Choice, Question
 
 
