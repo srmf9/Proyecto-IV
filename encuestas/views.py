@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
+from django.http import HttpResponse
 
 from .models import Choice, Question
 
@@ -11,7 +12,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        """Devuelve los últimos cinco preguntas publicadas."""
+        """Devuelve los ultimos cinco preguntas publicadas."""
         return Question.objects.order_by('-pub_date')[:5]
 
 
@@ -31,7 +32,7 @@ class JSONResponse(HttpResponse):
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
-@csrf_exempt
+
 def encuestas(request):
 
     if request.method == 'GET':
@@ -41,7 +42,7 @@ def encuestas(request):
 
     elif request.method == 'POST':
         data = JSONParser().parse(request)
-        serializador = QuestionSerializer(data=data)
+        serializador = QuestionSerializer(data=data) 
         if serializador.is_valid():
             serializador.save()
             return JSONResponse(serializador.data, status=201)
