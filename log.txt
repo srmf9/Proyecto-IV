@@ -1,0 +1,101 @@
+2015-11-29T18:38:44.483254+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-29T18:38:44.483256+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-11-29T18:38:44.483256+00:00 app[web.1]:     worker.init_process()
+2015-11-29T18:38:44.483258+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-11-29T18:38:44.483257+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-11-29T18:38:44.483259+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-11-29T18:38:44.483259+00:00 app[web.1]:     self.callable = self.load()
+2015-11-29T18:38:44.483260+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-11-29T18:38:44.483260+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-11-29T18:38:44.483261+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-11-29T18:38:44.483262+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-11-29T18:38:44.483262+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/util.py", line 355, in import_app
+2015-11-29T18:38:44.483263+00:00 app[web.1]:     __import__(module)
+2015-11-29T18:38:44.483263+00:00 app[web.1]:   File "/app/aplicacion/wsgi.py", line 16, in <module>
+2015-11-29T18:38:44.483264+00:00 app[web.1]:     application = get_wsgi_application()
+2015-11-29T18:38:44.483265+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-11-29T18:38:44.483265+00:00 app[web.1]:     django.setup()
+2015-11-29T18:38:44.483266+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/__init__.py", line 18, in setup
+2015-11-29T18:38:44.483267+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/apps/registry.py", line 108, in populate
+2015-11-29T18:38:44.483274+00:00 app[web.1]:     app_config.import_models(all_models)
+2015-11-29T18:38:44.483266+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2015-11-29T18:38:44.483275+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/apps/config.py", line 198, in import_models
+2015-11-29T18:38:44.483276+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/importlib/__init__.py", line 126, in import_module
+2015-11-29T18:38:44.483275+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2015-11-29T18:38:44.483277+00:00 app[web.1]:     return now - datetime.timedelta(days=1) <= self.pub_date <= now
+2015-11-29T18:38:44.483278+00:00 app[web.1]:                                                                   ^
+2015-11-29T18:38:44.483279+00:00 app[web.1]: TabError: inconsistent use of tabs and spaces in indentation
+2015-11-29T18:38:44.483279+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-29T18:38:44.483279+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+2015-11-29T18:38:44.483281+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/workers/base.py", line 118, in init_process
+2015-11-29T18:38:44.483276+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2015-11-29T18:38:44.483277+00:00 app[web.1]:   File "/app/encuestas/models.py", line 13
+2015-11-29T18:38:44.483280+00:00 app[web.1]:     worker.init_process()
+2015-11-29T18:38:44.483282+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2015-11-29T18:38:44.483283+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2015-11-29T18:38:44.483281+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2015-11-29T18:38:44.483282+00:00 app[web.1]:     self.callable = self.load()
+2015-11-29T18:38:44.483283+00:00 app[web.1]:     return self.load_wsgiapp()
+2015-11-29T18:38:44.483285+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/util.py", line 355, in import_app
+2015-11-29T18:38:44.483284+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2015-11-29T18:38:44.483285+00:00 app[web.1]:     __import__(module)
+2015-11-29T18:38:44.483286+00:00 app[web.1]:     application = get_wsgi_application()
+2015-11-29T18:38:44.483288+00:00 app[web.1]:     django.setup()
+2015-11-29T18:38:44.483289+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/__init__.py", line 18, in setup
+2015-11-29T18:38:44.483284+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2015-11-29T18:38:44.483290+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/apps/registry.py", line 108, in populate
+2015-11-29T18:38:44.483290+00:00 app[web.1]:     app_config.import_models(all_models)
+2015-11-29T18:38:44.483286+00:00 app[web.1]:   File "/app/aplicacion/wsgi.py", line 16, in <module>
+2015-11-29T18:38:44.483302+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2015-11-29T18:38:44.483303+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/importlib/__init__.py", line 126, in import_module
+2015-11-29T18:38:44.483287+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+2015-11-29T18:38:44.483289+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2015-11-29T18:38:44.483304+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2015-11-29T18:38:44.483304+00:00 app[web.1]:   File "/app/encuestas/models.py", line 13
+2015-11-29T18:38:44.483305+00:00 app[web.1]:     return now - datetime.timedelta(days=1) <= self.pub_date <= now
+2015-11-29T18:38:44.483305+00:00 app[web.1]:                                                                   ^
+2015-11-29T18:38:44.483301+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/django/apps/config.py", line 198, in import_models
+2015-11-29T18:38:44.483750+00:00 app[web.1]: TabError: inconsistent use of tabs and spaces in indentation
+2015-11-29T18:38:44.565369+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-29T18:38:44.565970+00:00 app[web.1]:     self.sleep()
+2015-11-29T18:38:44.566023+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 312, in sleep
+2015-11-29T18:38:44.566554+00:00 app[web.1]:     ready = select.select([self.PIPE[0]], [], [], 1.0)
+2015-11-29T18:38:44.566591+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+2015-11-29T18:38:44.566863+00:00 app[web.1]:     self.reap_workers()
+2015-11-29T18:38:44.566953+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+2015-11-29T18:38:44.567435+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2015-11-29T18:38:44.567531+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2015-11-29T18:38:44.565446+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 179, in run
+2015-11-29T18:38:44.567565+00:00 app[web.1]: 
+2015-11-29T18:38:44.567567+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2015-11-29T18:38:44.567567+00:00 app[web.1]: 
+2015-11-29T18:38:44.567676+00:00 app[web.1]:   File "/app/.heroku/python/bin/gunicorn", line 11, in <module>
+2015-11-29T18:38:44.567648+00:00 app[web.1]: Traceback (most recent call last):
+2015-11-29T18:38:44.567925+00:00 app[web.1]:     sys.exit(run())
+2015-11-29T18:38:44.567974+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+2015-11-29T18:38:44.568180+00:00 app[web.1]:     WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+2015-11-29T18:38:44.568204+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/base.py", line 189, in run
+2015-11-29T18:38:44.568541+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+2015-11-29T18:38:44.568742+00:00 app[web.1]:     Arbiter(self).run()
+2015-11-29T18:38:44.568517+00:00 app[web.1]:     super(Application, self).run()
+2015-11-29T18:38:44.568797+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 201, in run
+2015-11-29T18:38:44.569052+00:00 app[web.1]:     self.halt(reason=inst.reason, exit_status=inst.exit_status)
+2015-11-29T18:38:44.569461+00:00 app[web.1]:     self.stop()
+2015-11-29T18:38:44.569076+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 297, in halt
+2015-11-29T18:38:44.569885+00:00 app[web.1]:     time.sleep(0.1)
+2015-11-29T18:38:44.569496+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 342, in stop
+2015-11-29T18:38:44.569909+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 214, in handle_chld
+2015-11-29T18:38:44.570214+00:00 app[web.1]:     self.reap_workers()
+2015-11-29T18:38:44.570238+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.5/site-packages/gunicorn/arbiter.py", line 459, in reap_workers
+2015-11-29T18:38:44.570705+00:00 app[web.1]:     raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+2015-11-29T18:38:44.570764+00:00 app[web.1]: gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+2015-11-29T18:38:45.512531+00:00 heroku[web.1]: Process exited with status 1
+2015-11-29T18:38:45.526568+00:00 heroku[web.1]: State changed from up to crashed
+2015-11-29T18:38:50.150542+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=encuesta.herokuapp.com request_id=c50cd239-e9ad-4bf7-9ccd-029448ad46df fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:38:50.591679+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=encuesta.herokuapp.com request_id=16a15c9a-9cfa-426d-be51-3b658a5c8643 fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:17.312892+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=encuesta.herokuapp.com request_id=02a96f88-393d-4c42-8a46-b4f3d3aa2832 fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:17.927481+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=encuesta.herokuapp.com request_id=b0f82881-f533-4df6-bb5d-268d780324e3 fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:18.589846+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=encuesta.herokuapp.com request_id=6987d503-cbf4-4665-8658-e85b5995a08a fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:18.895539+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=encuesta.herokuapp.com request_id=835a63cd-ce1a-4feb-8918-6543117491d4 fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:24.262290+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/encuestas" host=encuesta.herokuapp.com request_id=e5616950-ff3e-4492-95d1-e9750fa18fb1 fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
+2015-11-29T18:44:24.427089+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=encuesta.herokuapp.com request_id=84933941-4c0b-44cf-ae7f-e3a3f2d772ed fwd="88.148.102.101" dyno= connect= service= status=503 bytes=
