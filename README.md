@@ -82,4 +82,4 @@ Me he decidido usar Heroku por su sencillez y popularidad ya que hay mucha infor
 
 Aqui dejo el enlace a la aplicación funcionando en heroku. [Encuestas](http://encuesta.herokuapp.com/).  
 La aplicación aun esta en pañales, me estoy centrando en la parte de despliege y  cuando tenga una aplicación funcional creada en la asignatura de DAI la subire aquí.  
-Para ver más información sobre el despliege en Heroku pulse [aqui](git)
+Para ver más información sobre el despliege en Heroku pulse [aqui](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/despliege.md)
