@@ -1,5 +1,6 @@
 # Proyecto-IV
 ## Salvador Rueda Molina
+![Sin titulo](https://travis-ci.org/srmf9/Proyecto-IV.svg?branch=master) [![Build Status](https://snap-ci.com/srmf9/Proyecto-IV/branch/master/build_image)](https://snap-ci.com/srmf9/Proyecto-IV/branch/master) [![Heroku](https://www.herokucdn.com/deploy/button.png)](http://encuesta.herokuapp.com/)   
 ## Primer hito
 Mi proyecto se basará en dar soporte y desplegar  una aplicación web que creare en la asignatura de DAI.
 
@@ -11,9 +12,7 @@ Las herramienas que he utiliado son:
 -Framework usado Django  
 -Base de datosusada SQLite  
 
-## Segundo hito
-
-![Sin titulo](https://travis-ci.org/srmf9/Proyecto-IV.svg?branch=master)  
+## Segundo hito  
  Para superar este segundo hito he decidido crear una aplicación basandome en el tutorial de django. Más adelante cuando avancemos en la asignatura de DAI pondré la aplicación definitiva pero será usando django y con python. Mientras tanto utilizare esta aplicación para pasarle los test y realizar la integración continua.  
 ##Las herramienas que he utiliado han sido:  
 -Lenguaje de programación->Python.  
@@ -74,4 +73,13 @@ before_install:
 ~~~
 
 Si la ejecución tiene éxito tendremos la siguiente captura:
-![Sin titulo](http://i1028.photobucket.com/albums/y349/Salva_Rueda/Eje8_zps3sfezoti.png)
+![Sin titulo](http://i1028.photobucket.com/albums/y349/Salva_Rueda/Eje8_zps3sfezoti.png)  
+
+## Tercer hito  
+## Despliege en un Paas: Heroku  
+
+Me he decidido usar Heroku por su sencillez y popularidad ya que hay mucha información en la red para cualquier tipo de fallo.
+
+Aqui dejo el enlace a la aplicación funcionando en heroku. [Encuestas](http://encuesta.herokuapp.com/).  
+La aplicación aun esta en pañales, me estoy centrando en la parte de despliege y  cuando tenga una aplicación funcional creada en la asignatura de DAI la subire aquí.  
+Para ver más información sobre el despliege en Heroku pulse [aqui](git)
