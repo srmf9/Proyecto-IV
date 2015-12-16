@@ -88,4 +88,4 @@ Para ver más información sobre el despliege en Heroku pulse [aqui](https://git
 ## Creación de un entorno de pruebas para la aplicación
 Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema operativo que más conozco y que más confianza tengo. He tenido que crear un Dockerfile para el despligue de la aplicación y un script para entrar en el contenedor con solo una línea de comandos.  [Aquí](https://hub.docker.com/r/srmf9/proyecto-iv/) podemos ver la imagen en DockerHub.
 
-[**Toda la información sobre el cuarto hito**](https://github.com)
+[**Toda la información sobre la creación de un entorno aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/contenedores.md)
