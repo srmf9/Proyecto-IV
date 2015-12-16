@@ -75,7 +75,7 @@ before_install:
 Si la ejecución tiene éxito tendremos la siguiente captura:
 ![Sin titulo](http://i1028.photobucket.com/albums/y349/Salva_Rueda/Eje8_zps3sfezoti.png)  
 
-## Tercer hito  
+
 ## Despliege en un Paas: Heroku  
 
 Me he decidido usar Heroku por su sencillez y popularidad ya que hay mucha información en la red para cualquier tipo de fallo.
@@ -83,3 +83,9 @@ Me he decidido usar Heroku por su sencillez y popularidad ya que hay mucha infor
 Aqui dejo el enlace a la aplicación funcionando en heroku. [Encuestas](http://encuesta.herokuapp.com/).  
 La aplicación aun esta en pañales, me estoy centrando en la parte de despliege y  cuando tenga una aplicación funcional creada en la asignatura de DAI la subire aquí.  
 Para ver más información sobre el despliege en Heroku pulse [aqui](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/despliege.md)
+
+
+## Creación de un entorno de pruebas para la aplicación
+Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema operativo que más conozco y que más confianza tengo. He tenido que crear un Dockerfile para el despligue de la aplicación y un script para entrar en el contenedor con solo una línea de comandos.  [Aquí](https://hub.docker.com/r/srmf9/proyecto-iv/) podemos ver la imagen en DockerHub.
+
+[**Toda la información sobre el cuarto hito**](https://github.com)
