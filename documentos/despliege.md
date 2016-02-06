@@ -27,7 +27,7 @@ Una vez que realizamos estos pasos procedo a subir la aplicación a [GitHub](htt
 
 * git push heroku master
 
-Y ya la tendriamos desplegada en Heroku: [enlace a la aplicación](http://encuesta.herokuapp.com/)    
+Y ya la tendriamos desplegada en Heroku: [enlace a la aplicación](http://bares-dai.herokuapp.com/)    
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/Captura%20de%20pantalla%20de%202015-11-30%20020029_zpsopmgr62l.png)
 
 ##Snap CI
