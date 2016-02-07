@@ -9,14 +9,14 @@ Mi proyecto se basará en dar soporte y desplegar  una aplicación web que crear
 Seguramente en ella hago uso de varios servidores web y probablemente  utilice un balanceador de carga.
 
 El objetivo será cubrir todos los requisitos de la aplicación de forma automática para que el usuario solo se tenga que preocuparse de usar la aplicación.
-Las herramienas que he utiliado son:     
+Las herramienas que he utilizado son:     
 -De lenguaje de programación usado Python    
 -Framework usado Django  
 -Base de datosusada SQLite  
 
 ## Segundo hito  
  Para superar este segundo hito he decidido crear una aplicación basandome en el tutorial de django. Más adelante cuando avancemos en la asignatura de DAI pondré la aplicación definitiva pero será usando django y con python. Mientras tanto utilizare esta aplicación para pasarle los test y realizar la integración continua.  
-##Las herramienas que he utiliado han sido:  
+##Las herramienas que he utilizado han sido:  
 -Lenguaje de programación->Python.  
 -Framework -> Django.  
 -Base de datos->SQLite
@@ -94,6 +94,6 @@ Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema ope
 
 ## Diseño del soporte virtual al desarrollo y despliegue de una aplicación  
 
-He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
+He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web.La aplicación se encuentra en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
 
 [**Toda la información sobre como he realizado el proceso aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/azure.md)  
