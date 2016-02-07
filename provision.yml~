@@ -1,0 +1,25 @@
+- hosts: localhost
+  sudo: yes
+  remote_user: vagrant
+  tasks:
+  - name: Actualizando sistema
+    apt: update_cache=yes upgrade=dist    
+  - name: Instalando paquetes necesarios para la máquina virtual
+    apt: name=python-setuptools state=present
+    apt: name=build-essential state=present
+    apt: name=python-dev state=present
+    apt: name=python-pip state=present
+    apt: name=git state=present
+  - name: Instalando el paquete python-pip
+    action: apt pkg=python-pip
+  - name: Instalando postgresql
+    command: sudo easy_install pip
+    command: sudo apt-get install -y python-dev libpq-dev python-psycopg2  
+  - name: Descargando la aplicación
+    git: repo=https://github.com/srmf9/Proyecto-IV.git  dest=aplicacion-desplegada clone=yes force=yes
+  - name: Dando permisos al directorio donde se descarga la aplicación
+    command: chmod -R +x aplicacion-desplegada
+  - name: Instalando los requisitos de la aplicación
+    command: pip install -r aplicacion-desplegada/requirements.txt
+  - name: Ejecutando aplicación
+    command: sudo python aplicacion-desplegada/manage.py runserver 0.0.0.0:80
