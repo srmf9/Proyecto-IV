@@ -12,8 +12,7 @@ Damos permiso a la clave:
 ``chmod 600 ~/.ssh/azurevagrant.key``  
 Y genero el .cer que será el certificado que debemos subir a azure:   
 ``openssl x509 -inform pem -in azurevagrant.key -outform der -out azurevagrant.cer``
-
-imagen    
+![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_zpsn9fqzba8.png)
 
 Ahora generamos el archivo .pem al que hay que añadirle la llave privada:  
 ``openssl req -x509 -key ~/.ssh/id_rsa -nodes -days 365 -newkey rsa:2048 -out azurevagrant.pem``  
