@@ -1,6 +1,8 @@
 # Proyecto-IV
 ## Salvador Rueda Molina
-![Sin titulo](https://travis-ci.org/srmf9/Proyecto-IV.svg?branch=master) [![Build Status](https://snap-ci.com/srmf9/Proyecto-IV/branch/master/build_image)](https://snap-ci.com/srmf9/Proyecto-IV/branch/master) [![Heroku](https://www.herokucdn.com/deploy/button.png)](http://encuesta.herokuapp.com/)   
+![Sin titulo](https://travis-ci.org/srmf9/Proyecto-IV.svg?branch=master) [![Build Status](https://snap-ci.com/srmf9/Proyecto-IV/branch/master/build_image)](https://snap-ci.com/srmf9/Proyecto-IV/branch/master) [![Heroku](https://www.herokucdn.com/deploy/button.png)](http://encuesta.herokuapp.com/)
+[![Azure](http://azuredeploy.net/deploybutton.png)](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/)
+   
 ## Primer hito
 Mi proyecto se basará en dar soporte y desplegar  una aplicación web que creare en la asignatura de DAI.
 
