@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt-get install npm
+sudo apt-get install nodejs-legacy
 sudo npm install -g azure-cli
 sudo apt-get install -y python-pip
 sudo pip install paramiko PyYAML jinja2 httplib2 ansible

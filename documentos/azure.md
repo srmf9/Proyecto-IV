@@ -81,6 +81,7 @@ Y ahora  deberemos crear el archivo provision.yml que es el encargado de instala
   - name: Ejecutando aplicación
     command: nohup python aplicacion-desplegada/manage.py runserver 0.0.0.0:80
 ```
+Deberemos comunicar en el archivo ansible_host que vamos a trabajar como una máquina localhost.
 Con esto  ya tendremos todo lo necesario para desplegar la aplicación. Ahora ejecutamos:  
 ``sudo vagrant up --provider=azure``  
 Este comando creara la máquina virtual y ejecutara el fichero de ansible. Si ya tenemos la máquina creada nos bastara con ejecutar:  
