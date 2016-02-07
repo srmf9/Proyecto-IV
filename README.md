@@ -89,3 +89,9 @@ Para ver más información sobre el despliege en Heroku pulse [aqui](https://git
 Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema operativo que más conozco y que más confianza tengo. He tenido que crear un Dockerfile para el despligue de la aplicación y un script para entrar en el contenedor con solo una línea de comandos.  [Aquí](https://hub.docker.com/r/srmf9/proyecto-iv/) podemos ver la imagen en DockerHub.
 
 [**Toda la información sobre la creación de un entorno aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/contenedores.md)
+
+## Diseño del soporte virtual al desarrollo y despliegue de una aplicación  
+
+He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
+
+[**Toda la información sobre como he realizado el proceso aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/contenedores.md)  
