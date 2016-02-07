@@ -94,4 +94,4 @@ Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema ope
 
 He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
 
-[**Toda la información sobre como he realizado el proceso aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/contenedores.md)  
+[**Toda la información sobre como he realizado el proceso aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/azure.md)  
