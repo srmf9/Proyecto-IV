@@ -12,7 +12,8 @@ Damos permiso a la clave:
 ``chmod 600 ~/.ssh/azurevagrant.key``  
 Y genero el .cer que será el certificado que debemos subir a azure:   
 ``openssl x509 -inform pem -in azurevagrant.key -outform der -out azurevagrant.cer``
-![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_zpsn9fqzba8.png)
+
+imagen    
 
 Ahora generamos el archivo .pem al que hay que añadirle la llave privada:  
 ``openssl req -x509 -key ~/.ssh/id_rsa -nodes -days 365 -newkey rsa:2048 -out azurevagrant.pem``  
@@ -83,14 +84,14 @@ Y ahora  deberemos crear el archivo provision.yml que es el encargado de instala
 Deberemos comunicar en el archivo ansible_host que vamos a trabajar como una máquina localhost.
 Con esto  ya tendremos todo lo necesario para desplegar la aplicación. Ahora ejecutamos:  
 ``sudo vagrant up --provider=azure``  
-Este comando creara la máquina virtual y ejecutara el fichero de ansible. Si ya tenemos la máquina creada nos bastara con ejecutar:  
+Este comando creará la máquina virtual y ejecutara el fichero de ansible. Si ya la tenemos la máquina creada nos bastará con ejecutar:  
 `` sudo vagrant provison``  
-Aqui podemos como se ha creado la máquina virtual en azure que cree en el Vangrantfile y la aplicación funcionando:  
+Aquí podemos ver como se ha creado la máquina virtual en azure que crea en el archivo Vangrantfile y la aplicación funcionando:  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_1_zpsgcz7zomy.png)  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_2_zpstth3shfa.png)  
-Para poder borrar todo lo que vagrant ha creado se hara con la siguiente línea:   
+Para poder borrar todo lo que vagrant ha creado se hará con la siguiente línea:   
 ``vagrant box remove <ubuntu-iv-eje8>``
-Para automatizar todo este proceso he creado un script llamado desplegar_IaaS.sh que se encarga de instalar todo lo necesario para el despliege de nuestra aplicación su contenido es el siguiente:  
+Para automatizar todo este proceso he creado un script llamado desplegar_IaaS.sh que se encarga de instalar todo lo necesario para el despliege de nuestra aplicación, su contenido es el siguiente:  
 ```
 #!/bin/bash
 sudo apt-get install npm
@@ -101,4 +102,4 @@ sudo apt-get install -y vagrant
 vagrant plugin install vagrant-azure
 sudo vagrant up --provider=azure
 ```
-Tras esto ya tendremos nuestra máquina virtual creada y puesta en marcha el enlace de la aplicacion es [este](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
+Tras esto ya tendremos nuestra máquina virtual creada y puesta en marcha, con un solo comando.El enlace de la aplicación es [este](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
