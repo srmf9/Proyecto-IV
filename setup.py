@@ -1,9 +1,9 @@
 from distutils.core import setup
 
-setup(name='Encuestas',
+setup(name='Bares',
 
       version='1.0',
-      description='Aplicacion web sobre encuestas',
+      description='Aplicacion web sobre bares',
       author='Salvador Rueda Molina',
       author_email='salviwui@gmail.com',
       url='enlace',
