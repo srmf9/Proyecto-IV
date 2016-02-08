@@ -88,7 +88,7 @@ A continuación  creamos un fichero llamado fabfile.py con las funciones que que
 from fabric.api import task, run, local, hosts, cd, env
 # Ejecutar la aplicacion
 def ejecutar_app():
-	run(' sudo python aplicacion-desplegada/manage.py runserver 0.0.0.0:80 ')
+	run(' sudo python aplicacion-desplegada/manage.py runserver 0.0.0.0:80 & ')
 #Borrar la maquina creada
 def borrar_app():
     run('sudo rm -r ubuntu-iv-eje8')
@@ -103,7 +103,7 @@ Aquí podemos ver como se ha creado la máquina virtual en azure que crea en el 
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_1_zpsgcz7zomy.png)  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/9_zpssb7l0duc.png)  
 Para poder borrar todo lo que vagrant ha creado se hará con la siguiente línea:   
-``vagrant box remove <ubuntu-iv-eje8>``
+``vagrant box remove <ubuntu-bares>``  
 Para automatizar todo este proceso he creado un script llamado desplegar_IaaS.sh que se encarga de instalar todo lo necesario para el despliege de nuestra aplicación, su contenido es el siguiente:  
 ```
 #!/bin/bash
@@ -115,6 +115,6 @@ sudo pip install paramiko PyYAML jinja2 httplib2 ansible
 sudo apt-get install -y vagrant
 vagrant plugin install vagrant-azure
 sudo vagrant up --provider=azure
-sudo fab -p 'Clave#salva#1' -H vagrant@mundo-bares.cloudapp.net ejecutar_app
+sudo fab -p 'Clave#salva#1' -H vagrant@mundo-bares.cloudapp.net ejecutar_app 
 ```
 Tras esto ya tendremos nuestra máquina virtual creada y puesta en marcha, con un solo comando.El enlace de la aplicación es [este](http://mundo-bares.cloudapp.net/).
