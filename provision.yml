@@ -21,5 +21,4 @@
     command: chmod -R +x aplicacion-desplegada
   - name: Instalando los requisitos de la aplicación
     command: pip install -r aplicacion-desplegada/requirements.txt
-  - name: Ejecutando aplicación
-    command: nohup python aplicacion-desplegada/manage.py runserver 0.0.0.0:80
+

@@ -1,7 +1,7 @@
 # Proyecto-IV
 ## Salvador Rueda Molina
 ![Sin titulo](https://travis-ci.org/srmf9/Proyecto-IV.svg?branch=master) [![Build Status](https://snap-ci.com/srmf9/Proyecto-IV/branch/master/build_image)](https://snap-ci.com/srmf9/Proyecto-IV/branch/master) [![Heroku](https://www.herokucdn.com/deploy/button.png)](http://bares-dai.herokuapp.com/)
-[![Azure](http://azuredeploy.net/deploybutton.png)](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/)
+[![Azure](http://azuredeploy.net/deploybutton.png)](http://mundo-bares.cloudapp.net/)
    
 ## Primer hito
 Mi proyecto se basará en dar soporte y desplegar  una aplicación web que creare en la asignatura de DAI.
@@ -94,6 +94,6 @@ Me he decidido por crear una imagen de Ubuntu en docker ya que es el sistema ope
 
 ## Diseño del soporte virtual al desarrollo y despliegue de una aplicación  
 
-He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web.La aplicación se encuentra en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
+He usado Vagrant+Ansible porque es donde he encontrado más información para solucionar todos los problemas que me iban surgiendo. He usado mi cuenta de Azure para crear la máquina virtual y la he dejado arrancada para que este disponible mi aplicación web.La aplicación se encuentra en este enlace [http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/](http://mundo-bares.cloudapp.net/).
 
 [**Toda la información sobre como he realizado el proceso aquí**](https://github.com/srmf9/Proyecto-IV/blob/master/documentos/azure.md)  

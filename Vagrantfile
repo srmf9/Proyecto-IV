@@ -14,12 +14,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       azure.mgmt_endpoint = 'https://management.core.windows.net'
       azure.subscription_id = '327715f7-dcef-44ef-bf93-d88889e67cb3' #id del certificado que encontramos en la web
       azure.vm_image = 'b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_3-LTS-amd64-server-20151218-en-us-30GB' #imagen de la máquina virtual
-      azure.vm_name = 'ubuntu-iv-eje8' #nombre de la máquina
-      azure.vm_password = 'Clave#salva#1'#nombre de usuario y contraseña	
+      azure.vm_name = 'ubuntu-bares' #nombre de la máquina
+      azure.vm_password = 'Clave#salva#1'#nombre de usuario y contraseña
+      azure.cloud_service_name = 'mundo-bares'	
       azure.vm_location = 'Central US'  #localización
       azure.ssh_port = '22' #puerto por el que escucha ssh
       azure.tcp_endpoints = '80:80'
   end
+
+
   
 
   #ansible

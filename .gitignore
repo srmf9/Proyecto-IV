@@ -1,0 +1,7 @@
+*~
+*.#
+*.pyc
+EntVirtual
+*.cer
+*.pem
+.vagrant

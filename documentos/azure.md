@@ -13,7 +13,7 @@ Damos permiso a la clave:
 Y genero el .cer que será el certificado que debemos subir a azure:   
 ``openssl x509 -inform pem -in azurevagrant.key -outform der -out azurevagrant.cer``
 
-imagen    
+![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_zpsn9fqzba8.png)    
 
 Ahora generamos el archivo .pem al que hay que añadirle la llave privada:  
 ``openssl req -x509 -key ~/.ssh/id_rsa -nodes -days 365 -newkey rsa:2048 -out azurevagrant.pem``  
@@ -36,7 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       azure.mgmt_endpoint = 'https://management.core.windows.net'
       azure.subscription_id = '327715f7-dcef-44ef-bf93-d88889e67cb3' #id del certificado que encontramos en la web
       azure.vm_image = 'b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04_3-LTS-amd64-server-20151218-en-us-30GB' #imagen de la máquina virtual
-      azure.vm_name = 'ubuntu-iv-eje8' #nombre de la máquina
+      azure.vm_name = 'ubuntu-bares' #nombre de la máquina
       azure.vm_password = 'Clave#salva#1'#nombre de usuario y contraseña	
       azure.vm_location = 'Central US'  #localización
       azure.ssh_port = '22' #puerto por el que escucha ssh
@@ -78,17 +78,30 @@ Y ahora  deberemos crear el archivo provision.yml que es el encargado de instala
     command: chmod -R +x aplicacion-desplegada
   - name: Instalando los requisitos de la aplicación
     command: pip install -r aplicacion-desplegada/requirements.txt
-  - name: Ejecutando aplicación
-    command: nohup python aplicacion-desplegada/manage.py runserver 0.0.0.0:80
+
 ```
-Deberemos comunicar en el archivo ansible_host que vamos a trabajar como una máquina localhost.
+Deberemos comunicar en el archivo ansible_host que vamos a trabajar como una máquina localhost.  
+Ahora es el momento de usar Fabric para ello lo he instalado con el siguiente comando:  
+``sudo apt-get install fabric``  
+A continuación  creamos un fichero llamado fabfile.py con las funciones que queremos realizar que en mi caso son:  
+```
+from fabric.api import task, run, local, hosts, cd, env
+# Ejecutar la aplicacion
+def ejecutar_app():
+	run(' sudo python aplicacion-desplegada/manage.py runserver 0.0.0.0:80 ')
+#Borrar la maquina creada
+def borrar_app():
+    run('sudo rm -r ubuntu-iv-eje8')
+```
 Con esto  ya tendremos todo lo necesario para desplegar la aplicación. Ahora ejecutamos:  
 ``sudo vagrant up --provider=azure``  
-Este comando creará la máquina virtual y ejecutara el fichero de ansible. Si ya la tenemos la máquina creada nos bastará con ejecutar:  
-`` sudo vagrant provison``  
+Este comando creará la máquina virtual y ejecutara el fichero de ansible que se encarga de provisionarla. Si ya la tenemos la máquina creada nos bastará con ejecutar:  
+`` sudo vagrant provison`` 
+Por último ejecutaremos la aplicación con el siguiente comando para ejecutar la aplicación:  
+``sudo fab -p 'Clave#salva#1' -H vagrant@mundo-bares.cloudapp.net ejecutar_app``   
 Aquí podemos ver como se ha creado la máquina virtual en azure que crea en el archivo Vangrantfile y la aplicación funcionando:  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_1_zpsgcz7zomy.png)  
-![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_2_zpstth3shfa.png)  
+![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/9_zpssb7l0duc.png)  
 Para poder borrar todo lo que vagrant ha creado se hará con la siguiente línea:   
 ``vagrant box remove <ubuntu-iv-eje8>``
 Para automatizar todo este proceso he creado un script llamado desplegar_IaaS.sh que se encarga de instalar todo lo necesario para el despliege de nuestra aplicación, su contenido es el siguiente:  
@@ -96,10 +109,12 @@ Para automatizar todo este proceso he creado un script llamado desplegar_IaaS.sh
 #!/bin/bash
 sudo apt-get install npm
 sudo npm install -g azure-cli
+sudo apt-get install fabric
 sudo apt-get install -y python-pip
 sudo pip install paramiko PyYAML jinja2 httplib2 ansible
 sudo apt-get install -y vagrant
 vagrant plugin install vagrant-azure
 sudo vagrant up --provider=azure
+sudo fab -p 'Clave#salva#1' -H vagrant@mundo-bares.cloudapp.net ejecutar_app
 ```
-Tras esto ya tendremos nuestra máquina virtual creada y puesta en marcha, con un solo comando.El enlace de la aplicación es [este](http://ubuntu-iv-eje8-service-wuqow.cloudapp.net/).
+Tras esto ya tendremos nuestra máquina virtual creada y puesta en marcha, con un solo comando.El enlace de la aplicación es [este](http://mundo-bares.cloudapp.net/).
