@@ -96,10 +96,10 @@ def borrar_app():
 Con esto  ya tendremos todo lo necesario para desplegar la aplicación. Ahora ejecutamos:  
 ``sudo vagrant up --provider=azure``  
 Este comando creará la máquina virtual y ejecutara el fichero de ansible que se encarga de provisionarla. Si ya la tenemos la máquina creada nos bastará con ejecutar:  
-`` sudo vagrant provison`` 
+`` sudo vagrant provison``   
 Por último ejecutaremos la aplicación con el siguiente comando para ejecutar la aplicación:  
 ``sudo fab -p 'Clave#salva#1' -H vagrant@mundo-bares.cloudapp.net ejecutar_app``   
-Aquí podemos ver como se ha creado la máquina virtual en azure que crea en el archivo Vangrantfile y la aplicación funcionando:  
+Aquí podemos ver como se ha creado la máquina virtual en azure que crea en el archivo Vangrantfile y la aplicación corriendo gracias al archivo fabfile.py:  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/8_1_zpsgcz7zomy.png)  
 ![imagen](http://i1028.photobucket.com/albums/y349/Salva_Rueda/9_zpssb7l0duc.png)  
 Para poder borrar todo lo que vagrant ha creado se hará con la siguiente línea:   
