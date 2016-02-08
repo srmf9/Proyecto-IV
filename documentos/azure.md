@@ -91,7 +91,7 @@ def ejecutar_app():
 	run(' sudo python aplicacion-desplegada/manage.py runserver 0.0.0.0:80 & ')
 #Borrar la maquina creada
 def borrar_app():
-    run('sudo rm -r ubuntu-iv-eje8')
+    run('sudo rm -r ubuntu-bares')
 ```
 Con esto  ya tendremos todo lo necesario para desplegar la aplicación. Ahora ejecutamos:  
 ``sudo vagrant up --provider=azure``  
